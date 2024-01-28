@@ -5,7 +5,10 @@ const botonMenor = document.querySelector(".cadena-coros-menores");
 const pantalla = document.querySelector(".pantalla-cadena");
 const atras = document.querySelector(".atras");
 const listasAgregadas = document.getElementById("ol");
-const tituloCadenas = document.querySelector(".ti-cadenas")
+const tituloCadenas = document.querySelector(".ti-cadenas");
+const listasDeCoros = document.querySelector('.btn-lista');
+const hojaCadenas =  document.querySelector('.todos-los-coros')
+const btnAtras = document.querySelector('.btn-atras');
 
 
 
@@ -32,20 +35,37 @@ const corosMenores =[
 ]
 
 
+var estadoLista = false;
+
 boton.addEventListener("click",function(){
+   estadoLista = true
     pantalla.style.visibility = "visible";
     tituloCadenas.innerText = 'CADENAS MAYORES'
    
-        for(let i=0; i <= 10; i++){
+        for(let i=0; i <= 9; i++){
         let numero = Math.floor(Math.random()*36)
        let listaCreada = document.createElement('li');
        listaCreada.innerText = `${corosMayores[numero]}.`;
        listasAgregadas.appendChild(listaCreada);
-}
+     }
   
+     listasDeCoros.addEventListener('click',function(){
+      hojaCadenas.style.visibility='visible';
+       if(estadoLista == true){
+          for(e = 0; e <= corosMayores.length-1;e++){
+            hojaCadenas.style.heigth = `${corosMayores.length * 26}px`
+             let listaEnteraMayor = document.createElement('li');
+             listaEnteraMayor.innerText = `${corosMayores[e]}`
+             hojaCadenas.appendChild(listaEnteraMayor);
+
+          }
+       }
+ 
+     })
 })
 
 botonMenor.addEventListener("click",function(){
+    estadoLista = false
     pantalla.style.visibility = "visible";
     tituloCadenas.innerText = 'CADENAS MENORES'
     
@@ -54,8 +74,27 @@ botonMenor.addEventListener("click",function(){
        let listaCreada = document.createElement('li');
        listaCreada.innerText = `${corosMenores[numero]}.`;
        listasAgregadas.appendChild(listaCreada);
+      }
+
+      listasDeCoros.addEventListener('click',function(){
+         hojaCadenas.style.visibility='visible';
+          if(estadoLista == false){
+             for(e = 0; e <= corosMenores.length-1;e++){
+               hojaCadenas.style.heigth = `${corosMenores.length * 26}px`
+                let listaEnteraMenor = document.createElement('li');
+                listaEnteraMenor.innerText = `${corosMenores[e]}`
+                hojaCadenas.appendChild(listaEnteraMenor);
+   
+             }
+          }
     
-}
+        })
+
+})
+
+btnAtras.addEventListener("click", ()=>{
+  hojaCadenas.style.visibility = 'hidden';
+   
 })
 
 atras.addEventListener("click", ()=>{
@@ -233,18 +272,17 @@ function texto(nota,numero,titulo1,titulo2,letra1,letra2,letra3,letra4,letra5,le
 
 
 
-texto("mayor","1","NO HAY DIOS TAN GRANDE COMO TU","𝙉𝙊 𝙃𝘼𝙔 𝘿𝙄𝙊𝙎 𝙏𝘼𝙉 𝙂𝙍𝘼𝙉𝘿𝙀 𝘾𝙊𝙈𝙊 𝙏𝙐",`//NO HAY DIOS TAN GRANDE COMO TU `,`NO LO HAY , NO LO HAY//`,"//NO HAY DIOS QUE PUEDA HACER LAS OBRAS ","COMO LAS QUE HACES TU//","//NO ES CON EJERCITO","NI CON ESPADA","ES CON SU SANTO ESPIRITU//","Y ESOS MONTES SE MOVERAN","Y ESOS MONTES SE MOVERAN","CON SU SANTO ESPIRITU",'','','','','','','','');
+texto("mayor","1","NO HAY DIOS TAN GRANDE COMO TU","𝙉𝙊 𝙃𝘼𝙔 𝘿𝙄𝙊𝙎 𝙏𝘼𝙉 𝙂𝙍𝘼𝙉𝘿𝙀 𝘾𝙊𝙈𝙊 𝙏𝙐",`//NO HAY DIOS TAN GRANDE COMO TU `,`NO LO HAY , NO LO HAY//`,"//NO HAY DIOS QUE PUEDA HACER LAS OBRAS ","COMO LAS QUE HACES TU//",'','','','','','','','','','','','','','');
 
 $(document).ready(function(){
    $(" #mayor-1 .a1 ").before("<h3>DO</h3>");
    $(" #mayor-1 .a2 ").before("<h3>SOL</h3><h3>DO - DO7</h3>");
    $(" #mayor-1 .a3 ").before("<h3>FA</h3><h3> </h3><h3>DO</h3>");
    $(" #mayor-1 .a4 ").before("<h3>SOL</h3><h3>DO</h3>");
-   $(" #mayor-1 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-1 .a6 ").before("<h3>do</h3><h3>re</h3>");
+ 
 });
 
-texto("mayor","2","ESTE ES EL CRISTO", "𝙀𝙎𝙏𝙀 𝙀𝙎 𝙀𝙇 𝘾𝙍𝙄𝙎𝙏𝙊",`ESTE ES EL CRISTO `,"QUE YO PREDICO","Y NO ME CANSO DE PREDICAR","SANA A LOS ENFERMOS","AUYENTA A LOS DEMONIOS","CALMA LOS VIENTOS ","Y TAMBIEN LA TEMPESTAD"," Y YO LE ALABARE "," Y YO LE ALABARE ","DICIENDO GLORIA A DIOS","","","","" ,"","","","" );
+texto("mayor","2","ESTE ES EL CRISTO", "𝙀𝙎𝙏𝙀 𝙀𝙎 𝙀𝙇 𝘾𝙍𝙄𝙎𝙏𝙊",`ESTE ES EL CRISTO `,"QUE YO PREDICO","Y NO ME CANSO DE PREDICAR","SANA A LOS ENFERMOS","AUYENTA A LOS DEMONIOS","CALMA LOS VIENTOS ","Y TAMBIEN LA TEMPESTAD"," Y YO LE ALABARE "," Y YO LE ALABARE "," Y YO LE ALABARE ","DICIENDO GLORIA A DIOS","","","","" ,"","","","" );
 
 $(document).ready(function(){
    $(" #mayor-2 .a1 ").before("<h3>DO</h3><h3></h3>");
@@ -257,66 +295,86 @@ $(document).ready(function(){
    $(" #mayor-2 .a8 ").before("<h3>DO7</h3><h3>FA</h3>");
    $(" #mayor-2 .a9 ").before("<h3>FA</h3><h3>DO</h3>");
    $(" #mayor-2 .a10 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-2 .a11 ").before("<h3>SOL</h3><h3>DO</h3>");
 });
 
 
-texto("mayor","3","VIVA LA FE ","𝙑𝙄𝙑𝘼 𝙇𝘼 𝙁𝙀",`///VIVA LA FE VIVA LA ESPERANZA`,"VIVA EL AMOR///","QUE VIVA CRISTO","QUE VIVA CRISTO ","QUE VIVA CRISTO EL","----------------","QUE VIVA CRISTO ","//QUE VIVA QUE VIVA CRISTO //","QUE VIVA EL ","");
+texto("mayor","3","VIVA LA FE ","𝙑𝙄𝙑𝘼 𝙇𝘼 𝙁𝙀",`VIVA LA FE VIVA LA ESPERANZA`,"VIVA EL AMOR",`VIVA LA FE VIVA LA ESPERANZA`,"VIVA EL AMOR",`VIVA LA FE VIVA LA ESPERANZA`,"VIVA EL AMOR","QUE VIVA CRISTO","QUE VIVA CRISTO ","QUE VIVA CRISTO EL","----------------","QUE VIVA CRISTO ","QUE VIVA  QUE VIVA CRISTO ","QUE VIVA  QUE VIVA CRISTO ","QUE VIVA EL ","","","","");
 
 $(document).ready(function(){
+
    $(" #mayor-3 .a1 ").before("<h3>DO</h3><h3></h3>");
-   $(" #mayor-3 .a2 ").before("<h3>DO</h3><h3>DO</h3>");
-   $(" #mayor-3 .a3 ").before("<h3>DO</h3><h3>SOL</h3>");
-   $(" #mayor-3 .a4 ").before("<h3>SOL</h3><h3>DO</h3>");
-   $(" #mayor-3 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-3 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-3 .a2 ").before("<h3>SOL</h3><h3></h3>");
+   $(" #mayor-3 .a3 ").before("<h3>SOL</h3><h3></h3>");
+   $(" #mayor-3 .a4 ").before("<h3>DO</h3><h3></h3>");
+   $(" #mayor-3 .a5 ").before("<h3>DO-DO7</h3><h3></h3>");
+   $(" #mayor-3 .a6 ").before("<h3>FA</h3><h3></h3>");
+   $(" #mayor-3 .a7 ").before("<h3>DO</h3><h3></h3>");
+   $(" #mayor-3 .a8 ").before("<h3>SOL</h3><h3></h3>");
+   $(" #mayor-3 .a9 ").before("<h3>DO</h3><h3></h3>");
+   $(" #mayor-3 .a11 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-3 .a12 ").before("<h3>SOL</h3><h3>DO</h3>");
+   $(" #mayor-3 .a13 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-3 .a14 ").before("<h3>SOL</h3><h3>DO</h3>");
+
+
 });
 
 
-texto("mayor","4","UNA MIRADA DE FE", "𝙐𝙉𝘼 𝙈𝙄𝙍𝘼𝘿𝘼 𝘿𝙀 𝙁𝙀","//UNA MIRADA DE FE ","UNA MIRADA DE AMOR ","ES LA QUE PUEDE ","SALVAR AL PECADOR//","Y SI TU VIERES A CRISTO JESUS","EL TE PERDONARA","PORQUE UN A MIRADA DE AMOR","ES LA QUE PUEDE ","SALVAR AL PECADOR");
+texto("mayor","4","UNA MIRADA DE FE", "𝙐𝙉𝘼 𝙈𝙄𝙍𝘼𝘿𝘼 𝘿𝙀 𝙁𝙀","//UNA MIRADA DE FE ","UNA MIRADA DE AMOR ","ES LA QUE PUEDE ","SALVAR AL PECADOR//","Y SI TU VIERES A CRISTO JESUS","EL TE PERDONARA","PORQUE UN A MIRADA DE FE","ES LA QUE PUEDE TE PUEDE SALVAR ","","","","","","","","","","");
 
 $(document).ready(function(){
-   $(" #mayor-4 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-4 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-4 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-4 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-4 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-4 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-4 .a1 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-4 .a2 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-4 .a3 ").before("<h3>SOL</h3><h3>SOL</h3>");
+   $(" #mayor-4 .a4 ").before("<h3>Do</h3><h3>DO-DO7</h3>");
+   $(" #mayor-4 .a5 ").before("<h3>Fa</h3><h3>Fa</h3>");
+   $(" #mayor-4 .a6 ").before("<h3>FA</h3><h3>DO</h3>");
+   $(" #mayor-4 .a7 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-4 .a8 ").before("<h3>SOL</h3><h3>DO</h3>");
 });
 
 
-texto("mayor","5","YO TENGO UN AMIGO QUE ME AMA","𝙔𝙊 𝙏𝙀𝙉𝙂𝙊 𝙐𝙉 𝘼𝙈𝙄𝙂𝙊 𝙌𝙐𝙀 𝙈𝙀 𝘼𝙈𝘼","YO TENGO UN AMIGO QUE ME AMA","ME AMA , ME AMA","YO TENGO UN AMIGO QUE ME AMA"," SU NOMBRE ES JESUS","//EL ME AMA//","EL ME AMA ASI CON TIERNO AMOR","//EL ME AMA//","SU NOMBRE ES JESUS");
+texto("mayor","5","YO TENGO UN AMIGO QUE ME AMA","𝙔𝙊 𝙏𝙀𝙉𝙂𝙊 𝙐𝙉 𝘼𝙈𝙄𝙂𝙊 𝙌𝙐𝙀 𝙈𝙀 𝘼𝙈𝘼","YO TENGO UN AMIGO QUE ME AMA","ME AMA , ME AMA","YO TENGO UN AMIGO QUE ME AMA"," SU NOMBRE ES JESUS","//EL ME AMA//","EL ME AMA ASI CON TIERNO AMOR","//EL ME AMA//","SU NOMBRE ES JESUS","","","","","","","","","");
 
 $(document).ready(function(){
-   $(" #mayor-5 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-5 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-5 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-5 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-5 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-5 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-5 .a1 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-5 .a2 ").before("<h3>SOL</h3><h3>DO</h3>");
+   $(" #mayor-5 .a3 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-5 .a4 ").before("<h3>FA-SOL</h3><h3>DO-DO7</h3>");
+   $(" #mayor-5 .a5 ").before("<h3>FA</h3><h3>DO</h3>");
+   $(" #mayor-5 .a6 ").before("<h3>SOL</h3><h3>DO-DO7</h3>");
+   $(" #mayor-5 .a7 ").before("<h3>FA</h3><h3>DO</h3>");
+   $(" #mayor-5 .a8 ").before("<h3>REm</h3><h3>SOL-DO</h3>");
 });
 
 
-texto("mayor","777","ALELUYA SOY UN SALVO","𝘼𝙇𝙀𝙇𝙐𝙔𝘼 𝙎𝙊𝙔 𝙐𝙉 𝙎𝘼𝙇𝙑𝙊","//ALELUYA SOY UN SALVO","PUES JESUCRISTO CON SU SANGRE ME LAVO","ALELUYA SOY UN SALVO","Y POR ESO ALEGRE ESTOY","ALELUYA SOY UN SALVO",".........","EL EVANGELIO ANUNCIARE","//ALELUYA ESTA VIDA ES DIFERENTE","CON JESÚS ETERNAMENTE VOY A MI CELESTE HOGAR//","");
+texto("mayor","777","ALELUYA SOY UN SALVO","𝘼𝙇𝙀𝙇𝙐𝙔𝘼 𝙎𝙊𝙔 𝙐𝙉 𝙎𝘼𝙇𝙑𝙊","//ALELUYA SOY UN SALVO","PUES JESUCRISTO CON SU SANGRE ME LAVO","ALELUYA SOY UN SALVO","Y POR ESO ALEGRE ESTOY","ALELUYA SOY UN SALVO","EL EVANGELIO ANUNCIARE","//ALELUYA ESTA VIDA ES DIFERENTE","CON JESÚS ETERNAMENTE VOY ","A MI CELESTE HOGAR//","","","","","","","",'');
 
 $(document).ready(function(){
-   $(" #mayor-777 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-777 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-777 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-777 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-777 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-777 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-777 .a1 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-777 .a2 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-777 .a3 ").before("<h3>SOL</h3><h3>SOL</h3>");
+   $(" #mayor-777 .a4 ").before("<h3>SOL</h3><h3>DO</h3>");
+   $(" #mayor-777 .a5 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-777 .a6 ").before("<h3>DO</h3><h3>D07-FA</h3>");
+   $(" #mayor-777 .a7 ").before("<h3>FA</h3><h3>DO</h3>");
+   $(" #mayor-777 .a8 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-777 .a9 ").before("<h3>SOL</h3><h3>DO</h3>");
 });
 
 
-texto("mayor","6","CRISTO ROMPE LAS CADENAS","CRISTO ROMPE LAS CADENAS","///CRISTO ROMPE LAS CADENAS///","Y ME DA SEGURIDAD" , "-------- O ---------","COMO ES POSIBLE YO VIVIR SIN TI JESUS","SI EL FUNDAMENTO DE MI VIDA ERES TU","TU ME SALVASTE Y ME LIBRASTE","DE LA MUERTE..","COMO ES POSIBLE YO VIVIR SIN TI JESUS","");
+texto("mayor","6","CRISTO ROMPE LAS CADENAS","CRISTO ROMPE LAS CADENAS","//CRISTO ROMPE LAS CADENAS","CRISTO ROMPE LAS CADENAS//","Y ME DA SEGURIDAD" , "-------- O ---------","COMO ES POSIBLE YO VIVIR SIN TI JESUS","SI EL FUNDAMENTO DE MI VIDA ERES TU","TU ME SALVASTE Y ME LIBRASTE","DE LA MUERTE..","COMO ES POSIBLE YO VIVIR SIN TI JESUS","","","","","","","","");
 
 $(document).ready(function(){
-   $(" #mayor-6 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-6 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-6 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-6 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-6 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-6 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-6 .a1 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-6 .a2 ").before("<h3>SOL</h3><h3>DO</h3>");
+   $(" #mayor-6 .a3 ").before("<h3>SOL</h3><h3>DO</h3>");
+   $(" #mayor-6 .a5 ").before("<h3>DO</h3><h3>SOL</h3>");
+   $(" #mayor-6 .a6 ").before("<h3>SOL</h3><h3>DO</h3>");
+   $(" #mayor-6 .a7 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-6 .a8 ").before("<h3>REm</h3><h3></h3>");
+   $(" #mayor-6 .a9 ").before("<h3>SOL</h3><h3>DO</h3>");
 });
 
 
@@ -381,6 +439,15 @@ $(document).ready(function(){
 
 
 texto("mayor","12","CRISTO TIENE PODER","CRISTO TIENE PODER","//CRISTO TIENE PODER//","CRISTO TIENE PODER ALELUYA TIENE PODER","CRISTO TIENE PODER CRISTO TIENE PODER","JESUCRISTO ES PODEROSO","JESUCRISTO  TIENE PODER","JESUCRISTO ES PODEROSO","JESUCRISTO TIENE PODER","");
+
+$(document).ready(function(){
+   $(" #mayor-12 .a1 ").before("<h3>do</h3><h3>do</h3>");
+   $(" #mayor-12 .a2 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-12 .a3 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-12 .a4 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-12 .a5 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-12 .a6 ").before("<h3>do</h3><h3>re</h3>");
+});
 
 texto("mayor","13","YO LE ALABO DE CORAZON ","YO LE ALABO DE CORAZON","//YO LE ALABO DE CORAZON "," YO LE ALABO CON MI VOZ//","Y SI ME FALTA LA VOZ ","YO LE ALABO CON MIS MANOS","Y SI ME FALATN LAS MANOS","YO LE ALABO CON MIS PIES ","Y SI ME FALTA LOS PIES ","YO LE ALABO CON EL ALMA","Y SI ME FALTARA EL ALMA..","ES.. QUE.. YA ESTOY CON EL...","//ALABALE ALABALE","ALABALE DE CORAZON//");
 
