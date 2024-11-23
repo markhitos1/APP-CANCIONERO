@@ -1,11 +1,14 @@
 /* cadenas de coros */
 
-
+body{
+    padding: 0px;
+    overflow-x: hidden;
+}
 
 
 .pantalla-cadena{
     margin: 2% ;
-    width: 93%;
+    width: 90%;
     height: 80%;
     background-color: rgb(252, 225, 190);
     color: black;
@@ -84,7 +87,7 @@
     position: absolute;
     visibility: hidden;
     margin: 0 2%;
-    width: 95%;
+    width: 90%;
     background-color: antiquewhite;
     box-shadow: 10px 10px 50px 40px rgba(0, 0, 0, 0.541);
     padding: 3% 10%;

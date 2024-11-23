@@ -10,6 +10,14 @@ const listasDeCoros = document.querySelector('.btn-lista');
 const hojaCadenas =  document.querySelector('.todos-los-coros')
 const btnAtras = document.querySelector('.btn-atras');
 
+const acordes = document.querySelectorAll('h3')
+
+let ver = acordes.forEach(index=>{
+  if (index.textContent.includes('C')) {
+   index.textContent = 'la-m'
+  }
+
+})
 
 
 const corosMayores = ["yo tengo un amigo",'esta alegria','caminando hacia Canaan','yo siento paz','gloria al Padre','yo le alabo',
@@ -328,7 +336,7 @@ $(document).ready(function(){
    $(" #mayor-4 .a2 ").before("<h3>DO</h3><h3>DO</h3>");
    $(" #mayor-4 .a3 ").before("<h3>SOL</h3><h3>SOL</h3>");
    $(" #mayor-4 .a4 ").before("<h3>Do</h3><h3>DO-DO7</h3>");
-   $(" #mayor-4 .a5 ").before("<h3>Fa</h3><h3>Fa</h3>");
+   $(" #mayor-4 .a5 ").before("<h3>FA</h3><h3>FA</h3>");
    $(" #mayor-4 .a6 ").before("<h3>FA</h3><h3>DO</h3>");
    $(" #mayor-4 .a7 ").before("<h3>DO</h3><h3>SOL</h3>");
    $(" #mayor-4 .a8 ").before("<h3>SOL</h3><h3>DO</h3>");
@@ -381,72 +389,72 @@ $(document).ready(function(){
 texto("mayor","7","DONDE ESTA EL ESPIRITU DE DIOS","DONDE ESTA EL ESPIRITU DE DIOS","DONDE ESTA EL ESPIRITU DE DIOS ","HAY LIUBERTAD ","HAY LIBERTAD","DONDE ESTA EL ESPIRITU DE DIOS ","ALLI SIEMPRE HAY LIBERTAD","///LIBERTAD...///","DONDE ESTA EL ESPIRITU DE DIOS ","ALLI SIEMPRE HAY LIBERTAD.","");
 
 $(document).ready(function(){
-   $(" #mayor-7 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-7 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-7 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-7 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-7 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-7 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-7 .a1 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-7 .a2 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-7 .a3 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-7 .a4 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-7 .a5 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-7 .a6 ").before("<h3>DO</h3><h3>RE</h3>");
 });
 
 
 texto("mayor","8","PASA POR AQUI SEÑOR","PASA POR AQUI SEÑOR","PASA POR AQUI SEÑOR PASA POR AQUI","PASA POR AQUI SEÑOR PASA POR AQUI","------ O ------","OHH OHH SEÑOR PASA POR AQUI","OHH OHH SEÑOR PASA POR AQUI..","","","","","");
 
 $(document).ready(function(){
-   $(" #mayor-8 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-8 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-8 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-8 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-8 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-8 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-8 .a1 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-8 .a2 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-8 .a3 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-8 .a4 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-8 .a5 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-8 .a6 ").before("<h3>DO</h3><h3>RE</h3>");
 });
 
 
 texto("mayor","9","ARDIENDO EL FUEGO","ARDIENDO EL FUEGO","ARDIENDO EL FUEGO EN MI ALMA ESTA","ARDIENDO EL FUEGO EN MI ALMA ESTA","GLORIOSA LLAMA ME LIBRARA","OHH ALELUYA ARDIENDO EL FUEGO ESTA","------ O ------","OHHH SEÑOR QUIERO QUE ARDAS EN MI SER ","COMO LA ZARZA QUIERO ARDE CON TU PODER","EN NUEVAS LENGUA QUIERO HABLAR COMO SEÑAL","QUE ESTOY ARDIENDO CON EL FUEGO CELESTIAL ","QUIERO ALABARTE Y ADORARTE SOLO A TI","COMO SE DORA EN ESPIRITU Y EN VERDAD","//OHHH SEÑOR QUIERO QUE ARDAS EN MI SER","COMO LA ZARZA QUIERO ARDER CON TU PODER//","");
 
 $(document).ready(function(){
-   $(" #mayor-9 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-9 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-9 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-9 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-9 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-9 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-9 .a1 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-9 .a2 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-9 .a3 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-9 .a4 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-9 .a5 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-9 .a6 ").before("<h3>DO</h3><h3>RE</h3>");
 });
 
 
 texto("mayor","10","BENDITO SEA JEHOVA LA ROCA","BENDITO SEA JEHOVA LA ROCA","BENDITO SEA JEHOVA LA ROCA","POR TODA LA ETERNIDAD","MI ESCONDEDERO Y MI REDFUGIO ","ERES TU BENDITO JEHOVA","EN TU PALABRA YO ESPERARE ","Y MI CONFIANZA EN TI PONDER ","OHH GLORIA OHH ALELUYA ","//AMEN AMEN..//","","","","","","","");
 
 $(document).ready(function(){
-   $(" #mayor-10 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-10 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-10 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-10 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-10 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-10 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-10 .a1 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-10 .a2 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-10 .a3 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-10 .a4 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-10 .a5 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-10 .a6 ").before("<h3>DO</h3><h3>RE</h3>");
 });
 
 
 texto("mayor","11","QUE NO SE APAGUE EL FUEGO","QUE NO SE APAGUE EL FUEGO QUE HAY EN MI CORAZÓN","QUE NO SE APAGUE EL FUEGO QUE HAY EN MI CORAZÓN","QUE NO SE APAGUE EL FUEGO QUE SIGA","QUE SIGA ARDIENDO MAS Y MAS","DAME GOZO SEÑOR "," DAME PAZ Y AMOR"," QUE YO QUIERO MORAR"," MAS ALLÁ DEL SOL","");
 
 $(document).ready(function(){
-   $(" #mayor-11 .a1 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-11 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-11 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-11 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-11 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-11 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-11 .a1 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-11 .a2 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-11 .a3 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-11 .a4 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-11 .a5 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-11 .a6 ").before("<h3>DO</h3><h3>RE</h3>");
 });
 
 
 texto("mayor","12","CRISTO TIENE PODER","CRISTO TIENE PODER","//CRISTO TIENE PODER//","CRISTO TIENE PODER ALELUYA TIENE PODER","CRISTO TIENE PODER CRISTO TIENE PODER","JESUCRISTO ES PODEROSO","JESUCRISTO  TIENE PODER","JESUCRISTO ES PODEROSO","JESUCRISTO TIENE PODER","");
 
 $(document).ready(function(){
-   $(" #mayor-12 .a1 ").before("<h3>do</h3><h3>do</h3>");
-   $(" #mayor-12 .a2 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-12 .a3 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-12 .a4 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-12 .a5 ").before("<h3>do</h3><h3>re</h3>");
-   $(" #mayor-12 .a6 ").before("<h3>do</h3><h3>re</h3>");
+   $(" #mayor-12 .a1 ").before("<h3>DO</h3><h3>DO</h3>");
+   $(" #mayor-12 .a2 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-12 .a3 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-12 .a4 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-12 .a5 ").before("<h3>DO</h3><h3>RE</h3>");
+   $(" #mayor-12 .a6 ").before("<h3>DO</h3><h3>RE</h3>");
 });
 
 texto("mayor","13","YO LE ALABO DE CORAZON ","YO LE ALABO DE CORAZON","//YO LE ALABO DE CORAZON "," YO LE ALABO CON MI VOZ//","Y SI ME FALTA LA VOZ ","YO LE ALABO CON MIS MANOS","Y SI ME FALATN LAS MANOS","YO LE ALABO CON MIS PIES ","Y SI ME FALTA LOS PIES ","YO LE ALABO CON EL ALMA","Y SI ME FALTARA EL ALMA..","ES.. QUE.. YA ESTOY CON EL...","//ALABALE ALABALE","ALABALE DE CORAZON//");
@@ -535,7 +543,7 @@ texto('mayor','50','SOLAMENTE CRISTO');
 
 
 
-/* COROS MAYORES */
+/* COROS MENORES */
 
 
 texto("menor","30","COMO LADRON DE LA NOCHE","COMO LADRON EN LA NOCHE","//COMO LADRON EN LA NOCHE//","ASI SERA LA VENIDA DEL HIJO DEL HOMBRE","//ESO LO DICE LA BIBLIA ","LA BIBLIA NO HA DE MENTIR","JESUCRISTO VENDRA ","COMO LADRON EN LA NOCHE//");
